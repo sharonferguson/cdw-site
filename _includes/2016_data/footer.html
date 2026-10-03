@@ -21,7 +21,7 @@ footer {
                 <span class="copyright">© {{ 'now' | date: "%Y" }} <a href="https://github.com/melvinchng/event-jekyll-theme">Event Jekyll Theme</a> by <a href="http://melvinchng.github.io">Melvin Ch'ng</a>,<br>All Rights Reserved.</span>
             </div>
             <div class="col-md-4">
-                <ul class="list-inline social-buttons">
+                <ul class="list-inline social-buttons{% if page.layout contains '2017' %} hidden{% endif %}">
                     {% for network in site.social %}
                         <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a></li>
                     {% endfor %}
